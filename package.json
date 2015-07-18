@@ -1,0 +1,23 @@
+{
+  "name": "htmjs",
+  "version": "0.0.0",
+  "description": "hierarchical temporal memory implementation for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "htm",
+    "hierarchical",
+    "temporal",
+    "memory",
+    "numenta",
+    "nupic"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mjpuser/htmjs.git"
+  },
+  "author": "Matthew Prestifilippo",
+  "license": "GPLv3"
+}
