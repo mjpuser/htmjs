@@ -19,5 +19,8 @@
     "url": "https://github.com/mjpuser/htmjs.git"
   },
   "author": "Matthew Prestifilippo",
-  "license": "GPLv3"
+  "license": "GPLv3",
+  "dependencies": {
+    "is-js": "^0.1.1"
+  }
 }
