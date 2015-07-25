@@ -21,6 +21,7 @@
   "author": "Matthew Prestifilippo",
   "license": "GPLv3",
   "dependencies": {
-    "is-js": "^0.1.1"
+    "is-js": "^0.1.1",
+    "sorted": "^0.1.1"
   }
 }
