@@ -1,6 +1,6 @@
 {
   "name": "htmjs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "hierarchical temporal memory implementation for JavaScript",
   "main": "index.js",
   "scripts": {
