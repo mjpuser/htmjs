@@ -385,12 +385,14 @@ var inputs = [/*
 [ 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ],
 [ 0, 0, 1, 0, 0, 1, 1, 1, 0, 0 ],/**/
 [ 0, 0, 1, 1, 0, 1, 1, 1, 1, 1 ],
-[ 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ]
+[ 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ],
+[ 0, 0, 1, 0, 0, 1, 1, 1, 0, 0 ]
 ];
 
+var prediction = '';
 inputs.forEach(function(input, i) {
 	var sdr = sp.getSDR(input);
 	tp.setInput(sdr);
-	console.log('sdr', sdr.toString());
-	console.log('                    -->', tp.predictAndLearn().toString());
+	console.log(sdr.toString(), 'should be ', prediction);
+	prediction = tp.predictAndLearn().toString();
 });
