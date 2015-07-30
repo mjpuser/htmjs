@@ -1,10 +1,10 @@
-var SP = require('./lib/spatial-pooler');
-var TP = require('./lib/temporal-pooler');
+var SP = require('../lib/spatial-pooler');
+var TP = require('../lib/temporal-pooler');
 var sp = new SP({
 	columns: 100,
 	inputs: 10,
-	minOverlap: 5,
-	medianSynapses: 30,
+	minOverlap: 3,
+	medianSynapses: 15,
 	desiredLocalActivity: 1
 });
 var tp = new TP({
@@ -385,8 +385,7 @@ var inputs = [/*
 [ 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ],
 [ 0, 0, 1, 0, 0, 1, 1, 1, 0, 0 ],
 [ 0, 0, 1, 1, 0, 1, 1, 1, 1, 1 ],
-[ 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ],
-[ 1, 1, 0, 0, 1, 1, 1, 0, 1, 1 ]
+[ 1, 1, 1, 1, 0, 0, 0, 0, 1, 1 ]
 ];
 
 inputs.forEach(function(input, i) {
