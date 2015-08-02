@@ -1,14 +1,14 @@
 var SP = require('../lib/spatial-pooler');
 var TP = require('../lib/temporal-pooler');
 var sp = new SP({
-	columns: 100,
+	columns: 200,
 	inputs: 10,
 	minOverlap: 3,
 	medianSynapses: 15,
 	desiredLocalActivity: 1
 });
 var tp = new TP({
-	columns: 100,
+	columns: 200,
 	cellsPerColumn: 3
 });
 
@@ -389,10 +389,13 @@ var inputs = [/*
 [ 0, 0, 1, 0, 0, 1, 1, 1, 0, 0 ]
 ];
 
-var prediction = '';
+var prediction = [];
 inputs.forEach(function(input, i) {
 	var sdr = sp.getSDR(input);
 	tp.setInput(sdr);
-	console.log(sdr.toString(), 'should be ', prediction);
-	prediction = tp.predictAndLearn().toString();
+	var percent = sdr.reduce(function(sum, i) {
+		return sum + ((prediction.indexOf(i) > -1) ? 1 : 0);
+	}, 0) / (prediction.length || 1) * 100;
+	console.log(Math.round(percent) + '%', sdr.toString(), 'should be ', prediction.toString());
+	prediction = tp.predictAndLearn();
 });
