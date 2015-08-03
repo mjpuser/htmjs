@@ -20,6 +20,8 @@ var tp = new TP({
 });
 */
 
+
+
 var inputs = [
 [19,32,48,68,82,103,119,138,149,158,174,193],
 [0,14,19,33,48,68,82,92,108,114,138,149,158,171,193],
@@ -100,7 +102,7 @@ inputs.forEach(function(sdr, i) {
 		return sum + ((prediction.indexOf(i) > -1) ? 1 : 0);
 	}, 0) / (prediction.length || 1) * 100;
 	console.log(Math.round(percent) + '%', sdr.toString(), 'should be ', prediction.toString());
-	prediction = tp.predictAndLearn();
+	prediction = tp.predict();
 });
 
 
