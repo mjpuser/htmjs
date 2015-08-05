@@ -237,3 +237,6 @@ inputs.forEach(function(sdr, i) {
 	console.log(sdr.toString(), 'should be ', prediction.toString());
 	prediction = tp.predictAndLearn();
 });
+// inspect segment synapse count
+// tp.columns[137].cells.forEach(function(cell) { cell.segments.forEach(function(seg) { console.log(seg.cell.columnId, seg.cell.id, seg.synapses.length, seg.active); }) });
+module.exports = tp;
