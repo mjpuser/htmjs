@@ -96,7 +96,7 @@ var inputs = [
 
 var tp = new TP({
 	columns: 200,
-	cellsPerColumn: 6
+	cellsPerColumn: 20
 });
 
 var prediction = [];
