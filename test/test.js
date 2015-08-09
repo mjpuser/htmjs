@@ -12,7 +12,7 @@ var serializer = require('../lib/temporal-pooler/serializer');
 */
 
 var tpConfig = require('../tp');
-var tp = serializer.hydrate(tpConfig);
+//var tp = serializer.hydrate(tpConfig);
 /*
 var tp = new TP({
 	columns: 200,
