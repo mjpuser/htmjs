@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema name="dictionary" version="1.5">
+	<fields>
+		<field name="word"   type="string"   indexed="true" stored="true" />
+		<field name="sdr" type="string" indexed="true" multiValued="true" stored="true" />
+		<field name="_version_" type="string" multiValued="false" docValues="true" indexed="true" stored="true" />
+		<dynamicField name="*" type="ignored"  />
+	</fields>
+	<uniqueKey>word</uniqueKey>
+
+	<types>
+		<fieldtype name="ignored" stored="false" indexed="false" multiValued="true" class="solr.StrField" />
+		<fieldType name="string" class="solr.StrField" sortMissingLast="true" />
+	</types>
+</schema>

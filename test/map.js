@@ -51,11 +51,9 @@ module.exports = {
 		words.split(' ').forEach(function(word) {
 			var sdr = mapper.input(word);
 			tp.setInput(sdr);
-			console.log('input', sdr);
 			prediction = tp.predictAndLearn();
-			console.log('prediction', prediction);
 		});
+		mapper.translate(prediction);
 		time.increment(); // increment time to clear out TP
-		return mapper.translate(prediction);
 	}
 };
