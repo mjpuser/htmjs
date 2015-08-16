@@ -45,7 +45,7 @@ var tp = TPSerializer.load(tpFile) || new TP({
 });
 
 module.exports = {
-	complete: function(words) {
+	learn: function(words) {
 		var prediction = null;
 		words = words || '';
 		words.split(' ').forEach(function(word) {
@@ -53,7 +53,35 @@ module.exports = {
 			tp.setInput(sdr);
 			prediction = tp.predictAndLearn();
 		});
-		mapper.translate(prediction);
+		var p = mapper.translate(prediction);
 		time.increment(); // increment time to clear out TP
+
+		return p;
+	},
+	predict: function(words, steps) {
+		steps = steps || 1;
+		return new Promise(function(resolve, reject) {
+			var prediction = null;
+			var phrase = [];
+			words = words || '';
+			words.split(' ').forEach(function(word) {
+				var sdr = mapper.input(word);
+				tp.setInput(sdr);
+				prediction = tp.predict();
+			});
+			mapper.translate(prediction).then(function resolver(res) {
+
+				phrase.push(res.word);
+				tp.setInput(res.sdr);
+				var prediction = tp.predict();
+				if (--steps > 0) {
+					return mapper.translate(prediction).then(resolver);
+				}
+				else {
+					time.increment();
+					resolve(phrase);
+				}
+			}).catch(reject);
+		});
 	}
 };
