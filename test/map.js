@@ -2,7 +2,7 @@
 
 var COLUMN_LENGTH = 4000;
 var INPUT_LENGTH = 300;
-var MEDIAN_SYNAPSES = 20; // synapses per SP column
+var MEDIAN_SYNAPSES = 150; // synapses per SP column
 var CELLS_PER_COLUMN = 20;
 var MAX_SEGMENTS_PER_CELL = 17;
 var MAX_DENDRITES_PER_SEGMENT = 34;
@@ -27,12 +27,13 @@ var se = new SpatialEncoder({
 	sp: sp,
 	inputLength: INPUT_LENGTH,
 	columnLength: COLUMN_LENGTH,
-	medianSynapses: MEDIAN_SYNAPSES
+	medianSynapses: MEDIAN_SYNAPSES,
+	minOverlap: 10
 });
 var mapper = new Mapper({
 	encoder: se
 });
-var tp = TPSerializer.load(tpFile) || new TP({
+var tp = TPSerializer.load(tpFile) || new TP(/*{
 	columnLength: COLUMN_LENGTH,
 	cellsPerColumn: CELLS_PER_COLUMN,
 	maxSegmentsPerCell: MAX_SEGMENTS_PER_CELL,
@@ -42,7 +43,16 @@ var tp = TPSerializer.load(tpFile) || new TP({
 	dendriteSpan: DENDRITE_SPAN,
 	permanenceDec: PERMANENCE_DEC,
 	permanenceInc: PERMANENCE_INC
-});
+},*/ { columnLength: 4000,
+     cellsPerColumn: 47,
+     maxSegmentsPerCell: 18,
+     maxDendritesPerSegment: 23,
+     activationThreshold: 4,
+     minThreshold: 11,
+     dendriteSpan: 91,
+     permanenceDec: 0.413,
+     permanenceInc: 0.784,
+     score: 100 });
 
 module.exports = {
 	learn: function(words) {
@@ -70,9 +80,9 @@ module.exports = {
 				prediction = tp.predict();
 			});
 			mapper.translate(prediction).then(function resolver(res) {
-
+				var sdr = mapper.input(res.word);
 				phrase.push(res.word);
-				tp.setInput(res.sdr);
+				tp.setInput(sdr);
 				var prediction = tp.predict();
 				if (--steps > 0) {
 					return mapper.translate(prediction).then(resolver);
