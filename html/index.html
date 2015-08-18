@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<title>AI</title>
+
+<form action="/learn" method="post">
+    <h1> learn </h1>
+    <textarea name="text"></textarea>
+    <button type="submit">teach</button>
+</form>
+<form action="/predict" method="post">
+    <h1> predict </h1>
+    <textarea name="text"></textarea>
+    <input name="steps" value="1"/>
+    <button type="submit">predict</button>
+    <div id="response"></div>
+</form>
+
+
+<script>
+    document.querySelector('body').addEventListener('submit', function(e) {
+        e.preventDefault();
+        e.target.querySelector('textarea').value.split('\n').forEach(function(sentence) {
+            var steps = 1;
+            var stepsInput = e.target.querySelector('input');
+            if (stepsInput) {
+                steps = stepsInput.value;
+            }
+            fetch(e.target.getAttribute('action') + '?steps=' + steps, {
+                method: 'post',
+                body: encodeURIComponent(sentence)
+            }).then(function(res) {
+                return res.text();
+            }).then(function(body) {
+                document.querySelector('#response').innerText = body;
+            });
+        });
+    });
+</script>
