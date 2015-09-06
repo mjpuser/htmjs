@@ -66,13 +66,13 @@ htm implementation for javascript
 * the front knobs are the mammilary bodies
 
 
-.h1 Areas!
+# Areas!
 * 24,32,33 - error detection / conflict monitoring, emotional reaction to pain
 * 28 - speed, spatial, memory consolidation
 * 31 - autobiographical memory retrieval
 
 
-.h1 Neurons
+# Neurons
 * granule - excitatory. Two long axonal branches.  Many in cerebellum.
 * mossy fiber - excitatory (cerebellum vs hippocampus) - hippo: vericosy (like purkinje) - cerebellum: long, extending from pons, affect many purkinje
 * purkinje - inhibitory - large branching arbors.  Intersect with granule
@@ -83,13 +83,13 @@ htm implementation for javascript
 * stellate - excitatory in neocortex, inhibitory in cerebellum - layer IV and make up about 20% (visual cortex)
 * other inhibitory - 15% of neocortex - fast spiking
 
-.h2 Neural Circuits
+## Neural Circuits
 * divergent
 * convergent
 * feedback loops
 * parallel after-discharge - related to bursting?
 
-.h2 Neuron types
+## Neuron types
 * bipolar
 * double bouquet
 * Multipolar
@@ -97,8 +97,8 @@ htm implementation for javascript
 
 
 
-.h1 Roadmap
-.h2 Build up working structures from the ground up.
+# Roadmap
+## Build up working structures from the ground up.
 * How do neurons work synapses / neurotransmitters / pumps / dendrites / terminals?
 * How do smaller Neural circuits work / behavior?
 * What types of neurons differentiate different brain structures?
@@ -109,13 +109,14 @@ htm implementation for javascript
 
 
 
-.h2 Tasks
-.h3 Read a definition
+# Tasks
+## Read a definition
 This would be able to update the segments and synapses of cells (possibly adding segments?). This would have to be able to somehow reorganize or somehow influence higher order synapses.
 
-.h3 Add numbers
+## Add numbers
 There are multiple ways to ask something to add a number.
 This is different than the normal "prediction" algorithm where it takes time series data, and makes a prediction.  Adding isn't really learned by seeing it being added before.  You have to learn the general concept of what adding numbers does, learn what the numbers mean (their value) and then you can predict what the answer is.  I think that since this is a higher level computation, it is therefore not a sensory thing, there has to be multiple layers of this crap going on, but how do you learn to separate this stuff? 
 
+# Further reading
 Cool article on circuits in the neocortex:
 http://www.mrc.uidaho.edu/~rwells/techdocs/reu06/Cortical%20Neurons%20and%20Circuits.pdf
