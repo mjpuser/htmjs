@@ -80,8 +80,15 @@ Look at test/test.js which has an example on how to use this
 
 
 .h1 Neurons
+* granule - excitatory. Two long axonal branches.  Many in cerebellum.
+* microfiber - excitatory 
+* purkinje _ inhibitory - large branching arbors.  Intersect with granule
 
 .h2 Neural Circuits
+* divergent
+* convergent
+* feedback loops
+* parallel after-discharge - related to bursting?
 
 .h2 Neuron types
 * bipolar
