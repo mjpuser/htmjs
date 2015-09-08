@@ -52,6 +52,7 @@ htm implementation for javascript
 * share state: immobility and consumatory - hippo -> neocortical flow
 * place cells
 * circuit is lateral (cross section of the hippocampus)
+* neurons are known to form here
 
 ## Entorhinal cortex
 * alzheimers (causes smaller hippocampus), schizo (think random connections)
@@ -95,6 +96,7 @@ htm implementation for javascript
 * Multipolar
 * thalamic neurons vs cortical neurons vs different layers vs hippocampal neurons
 
+* astrocytes - important in supporting neurons, scaring, and support blood flow.
 
 
 # Roadmap
