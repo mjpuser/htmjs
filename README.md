@@ -120,11 +120,11 @@ There are multiple ways to ask something to add a number.
 This is different than the normal "prediction" algorithm where it takes time series data, and makes a prediction.  Adding isn't really learned by seeing it being added before.  You have to learn the general concept of what adding numbers does, learn what the numbers mean (their value) and then you can predict what the answer is.  I think that since this is a higher level computation, it is therefore not a sensory thing, there has to be multiple layers of this crap going on, but how do you learn to separate this stuff? 
 
 # Brain Builder
-* tests against the brain
-** Do a task that has a score
-** ex: remember something, id something, find something, maintain habit, communicate, avoid something
+* tests against the brain   
+  * Do a task that has a score   
+  * ex: remember something, id something, find something, maintain habit, communicate, avoid something    
 * the brain has to remember how it was built
-** Remember placement and type of neurons (not sure where/how to store this info.  It should be a mix of local env and the genetic makeup)
+  * Remember placement and type of neurons (not sure where/how to store this info.  It should be a mix of local env and the genetic makeup)
 
 
 
