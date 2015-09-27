@@ -13,7 +13,7 @@ htm implementation for javascript
 * differences between hemispheres (wider dendrite spans in right)
 * frequency to mean more intense sensation (this could differ for different areas)
 * bursting vs tonic impulses
-
+* general idea: neurons are driven to fire together.  The inhibitory cells are meant to align them. So maybe inhibitory cells are the keys to distinguishing and perception.
 
 ## Thalamus
 * Every sensory system relayed through here to the cortex
