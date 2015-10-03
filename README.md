@@ -14,6 +14,7 @@ htm implementation for javascript
 * frequency to mean more intense sensation (this could differ for different areas)
 * bursting vs tonic impulses
 * neglect vs blindsight.  Thalamus: Lateral Geniculate Nucleus.
+* idea: Memory is consciousness over time.
 
 ## Thalamus
 * Every sensory system relayed through here to the cortex
