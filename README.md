@@ -4,7 +4,7 @@ htm implementation for javascript
 # Concepts
 
 ## Maps
-* Thalamus -> Cortex -> Striatum -> Pallidum/nigra -> Thalamus
+* Thalamus -> Cortex -> Striatum -> Pallidum/nigra -> Thalamus (http://www.scholarpedia.org/article/Basal_ganglia#Input.2Foutput_architecture)
 * *Direct:* Cortex (stimulates) → Striatum (inhibits) → "SNr-GPi" complex (less inhibition of thalamus) → Thalamus (stimulates) → Cortex (stimulates) → Muscles, etc. → (hyperkinetic state)
 * *Indirect (antagonist):* Cortex (stimulates) → Striatum (inhibits) → GPe (less inhibition of STN) → STN (stimulates) → "SNr-GPi" complex (inhibits) → Thalamus (is stimulating less) → Cortex (is stimulating less) → Muscles, etc. → (hypokinetic state)
 
